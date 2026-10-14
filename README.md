@@ -3,7 +3,7 @@
 # WAF Defensivo - Prevención de Robo de Identidad (México)
 Proyecto certificado en LinkedIn - Licencias y certificaciones.
 
-**Autor:** Giovani (@Giovani547) | **Stack:** Python FastAPI + Swift iOS
+**Autor:** Giovani Martinez Guzmán (@Giovani547) | **Stack:** Python FastAPI + Swift iOS
 
 Este proyecto implementa un Web Application Firewall defensivo enfocado en proteger datos sensibles mexicanos (CURP/RFC) bajo lineamientos OWASP Top 10.
 
