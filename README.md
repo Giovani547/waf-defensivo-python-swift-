@@ -7,7 +7,7 @@ Proyecto certificado en LinkedIn - Licencias y certificaciones.
 
 Este proyecto implementa un Web Application Firewall defensivo enfocado en proteger datos sensibles mexicanos (CURP/RFC) bajo lineamientos OWASP Top 10.
 
-### -> Ver evidencia en LinkedIn: [Mi Certificación](https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315)
+### -> Ver evidencia en LinkedIn: [Mi Certificación](https://https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315)
 
 ### Arquitectura Defensiva
 - Detección: SQLi, XSS, Command Injection, Path Traversal
