@@ -14,7 +14,7 @@ import logging
 
 app = FastAPI(
     title="WAF Defensivo México",
-    description="Proyecto de Giovani Martinez - https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315",
+    description="Proyecto de Giovani Martinez - https://https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315",
     version="1.0"
 )
 
@@ -76,6 +76,6 @@ def health():
     return {
         "status": "WAF Activo", 
         "autor": "Giovani Martinez Guzman",
-        "linkedin": "https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315",
+        "linkedin": "https://https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315",
         "owasp": "Protegido"
     }
