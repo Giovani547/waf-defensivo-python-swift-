@@ -1,6 +1,6 @@
 # ============================================================================
 # WAF DEFENSIVO PYTHON + SWIFT - PROYECTO FINAL
-# Autor: Giovani Martinez Guzman | GitHub: Giovani547
+# Autor: Giovani Martinez Guzmán | GitHub: Giovani547
 # LinkedIn: https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315
 # Fibotech - QA Automation | Ciberseguridad México CURP/RFC | Swift Secure Enclave
 # 7 años de experiencia | OWASP Top 10 | AGPL-3.0
@@ -18,7 +18,7 @@ app = FastAPI(
     title="WAF Defensivo México - Martinez Guzman",
     description="WAF para prevención robo identidad CURP/RFC - Python + Swift Secure Enclave",
     version="2.0.0",
-    contact={"name": "Giovani Martinez Guzman", "url": "https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315"}
+    contact={"name": "Giovani Martinez Guzmán", "url": "https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315"}
 )
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - [WAF] - %(message)s')
@@ -45,7 +45,6 @@ def detect_attack(payload: str) -> tuple[bool, str]:
     return False, ""
 
 def hash_sensitive(data: str) -> str:
-    # No guardamos PII real, solo hash para logs
     return hashlib.sha256(data.encode()).hexdigest()[:10]
 
 # --- 3. MIDDLEWARE WAF CHIDO ---
@@ -62,13 +61,12 @@ async def waf_chido_middleware(request: Request, call_next):
             content={
                 "bloqueado": True,
                 "motivo": rule,
-                "waf": "Giovani Martinez Guzman - Activo",
+                "waf": "Giovani Martinez Guzmán - Activo",
                 "timestamp": datetime.now().isoformat()
             }
         )
     
     response = await call_next(request)
-    # Headers pro
     response.headers["X-Frame-Options"] = "DENY"
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-XSS-Protection"] = "1; mode=block"
@@ -83,7 +81,7 @@ def root():
     return {
         "proyecto": "waf-defensivo-python-swift-",
         "status": "🔥 CHIDO Y ACTIVO",
-        "autor": "Giovani Martinez Guzman",
+        "autor": "Giovani Martinez Guzmán",
         "github": "Giovani547",
         "linkedin": "https://www.linkedin.com/in/giovani-martinez-guzm%C3%A1n-a119a7315",
         "stack": ["Python", "FastAPI", "Swift Secure Enclave", "MySQL", "OWASP"],
@@ -110,13 +108,12 @@ def validar_identidad(curp: str, rfc: str):
 
 @app.get("/health")
 def health_check():
-    return {"waf": "chido", "owasp": "protegido", "autor": "Martinez Guzman", "uptime": "ok"}
+    return {"waf": "chido", "owasp": "protegido", "autor": "Giovani Martinez Guzmán", "uptime": "ok"}
 
 @app.get("/swift-secure-enclave")
 def swift_info():
-    # Endpoint que demuestra integración con Swift que te piden
     return {
         "ios": "Secure Enclave integrado",
         "descripcion": "Biometría + Keychain + WAF",
-        "swift_code": "let context = LAContext() // FaceID protegida"
+        "swift_code": "let context = LAContext() // FaceID protegida - Giovani Martinez Guzman"
     }
